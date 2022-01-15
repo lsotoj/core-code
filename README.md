@@ -12,6 +12,17 @@ core code bootcamp
 -  Why is pseudocode helpful?  
    &nbsp;&nbsp;&nbsp;&nbsp; To understand the problem and plan the solution.  
    
+- Create a pseudocode to calculate the aproximated age of a user base on the year they born  
+&nbsp;&nbsp;&nbsp;&nbsp; INICIO  
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Y <-- 2022  
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; BORN <-- 1991  
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; CALCULAR AGE <-- Y - BORN  
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; DEVOLVER AGE  
+&nbsp;&nbsp;&nbsp;&nbsp; FIN  
+- Why are flowcharts important to us as developers?  
+  To us as developers a flowchart can help us to define the process and flow of our solution, is important to define it before we write some line of code or some PSEUDOCODE because it should help us determine if our solution ends solving the problem.  
+  
+
 
 
 

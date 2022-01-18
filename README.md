@@ -78,7 +78,16 @@ core code bootcamp
 	syscall
 ```
 
-
+> ## **Thursday**  
+> 1. Search for real word applications of Javascript.  
+> &nbsp;&nbsp;&nbsp;&nbsp; Slack was build with JavaScript.  
+> 2. (optional but great) Watch this video.  
+> &nbsp;&nbsp;&nbsp;&nbsp; Done.  
+> 3. (optional but great) Watch this video.  
+>  &nbsp;&nbsp;&nbsp;&nbsp; Done.  
+>  4. Follow the github course, you can find it here.  
+>  &nbsp;&nbsp;&nbsp;&nbsp; Done.  
+>  
 
 
 > # **Week 2**  

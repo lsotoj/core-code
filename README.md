@@ -94,9 +94,10 @@ core code bootcamp
 > ## **Monday**  
 > 1. Follow the github course.  
 > &nbsp;&nbsp;&nbsp;&nbsp; Done.  
-> 2. Watch this video.
+> 2. Watch this video.  
 > &nbsp;&nbsp;&nbsp;&nbsp; Done.
 > 3. Read this.  
+> &nbsp;&nbsp;&nbsp;&nbsp; Done.
 > 4. Create an account in Codewars.  
 > &nbsp;&nbsp;&nbsp;&nbsp; User: https://www.codewars.com/users/lsotoj
 > 

@@ -100,9 +100,17 @@ core code bootcamp
 > &nbsp;&nbsp;&nbsp;&nbsp; Done.
 > 4. Create an account in Codewars.  
 > &nbsp;&nbsp;&nbsp;&nbsp; User: https://www.codewars.com/users/lsotoj
-> 
 
-  
+
+> ## **Tuesday**  
+> 1. https://www.codewars.com/kata/50654ddff44f800200000004  
+```javascript
+function multiply(a, b){
+  return a * b;
+};
+```  
+> 
+ 
 
 
 

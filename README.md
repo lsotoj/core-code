@@ -109,7 +109,69 @@ function multiply(a, b){
   return a * b;
 };
 ```  
-> 
+> 2. You'll be given a string, and have to return the sum of all characters as an int. The function should be able to handle all ASCII characters.  
+```javascript
+function uniTotal (string) {
+let counter = 0;
+  
+  for (let i = 0; i < string.length; i++){
+    counter += string.charCodeAt(i);
+  }
+  return counter;
+}
+```  
+> 3. Write a function get_char() / getChar() which takes a number and returns the corresponding ASCII char for that value.  
+> Example:  
+```javascript
+get_char(65)
+```  
+> should return:  
+```javascript
+'A'
+```  
+> Solution:  
+```javascript
+function getChar(c){
+  return String.fromCharCode(c)
+}
+```  
+> 4. Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.  
+> The binary number returned should be a string.  
+>Solution:  
+```javascript
+function addBinary(a,b) {
+  let c =  a + b
+  
+  let cBinary = c.toString(2)
+  
+  return cBinary
+}
+``` 
+> 5. Create a function finalGrade, which calculates the final grade of a student depending on two parameters: a grade for the exam and a number of completed projects. This function should take two arguments: exam - grade for exam (from 0 to 100); projects - number of completed projects (from 0 and above);  
+> This function should return a number (final grade). There are four types of final grades:  
+> 100, if a grade for the exam is more than 90 or if a number of completed projects more than 10.  
+> 90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.  
+> 75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.  
+> 0, in other cases  
+> Solution:
+```javascript
+function finalGrade (exam, projects) {
+  if(exam > 90 || projects > 10) {
+    
+    return 100;
+  }
+  
+  if(exam > 75 && projects >= 5) {
+     return 90;
+  }
+  
+  if(exam > 50 && projects >= 2) {
+    return 75
+    
+  }
+  return 0;
+}
+``` 
  
 > ## **Wednesday**  
 > 1. The purpose of this kata is to work out just how many bottles of duty free whiskey you would have to buy such that the saving over the normal high street price would effectively cover the cost of your holiday.  

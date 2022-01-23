@@ -197,3 +197,43 @@ function twiceAsOld(dadYearsOld, sonYearsOld) {
   
 }
 ``` 
+> 3. Your task is to write a function called valid_spacing() or validSpacing() which checks if a string has valid spacing. The function should return either True or False. For this kata, the definition of valid spacing is one space between words, and no leading or trailing spaces. Below are some examples of what the function should return.
+```javascript
+'Hello world' = true
+' Hello world' = false
+'Hello world  ' = false
+'Hello  world' = false
+``` 
+> Solution:  
+```javascript
+function validSpacing(s) {
+  let last = s[0];
+  if(s[0] === " " || s[s.length - 1] === " "){
+    return false
+  }
+  
+  for(let i =1; i < s.length; i++){
+    if(last === " " && last === s[i]){
+      return false
+    }
+    last = s[i];
+  }
+  
+  return true;
+}
+``` 
+> 4. Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.  
+> Solution:  
+```javascript
+function fakeBin(x){
+  let result = [];
+  for(let i = 0; i < x.length; i++) {
+    if(parseInt(x[i], 10) < 5)
+      result.push('0')
+    
+    if(parseInt(x[i]) >= 5)
+       result.push('1');
+  }
+  return result.join(""); 
+}
+```

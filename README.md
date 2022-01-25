@@ -237,3 +237,68 @@ function fakeBin(x){
   return result.join(""); 
 }
 ```
+
+
+> # **Week 3**  
+> ## **Monday** 
+> 1. https://www.codewars.com/kata/5266876b8f4bf2da9b000362  
+> Solution:  
+```javascript
+function likes(names) {
+  // TODO
+  if(names.length === 0)
+    return "no one likes this"
+    
+  if(names.length === 1) {
+    return `${names[0]} likes this`;
+  }
+  
+  if(names.length === 2) {
+    return `${names[0]} and ${names[1]} like this`
+  }
+  
+  if(names.length === 3) {
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+  }
+  
+  if(names.length >= 4) {
+    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+  }
+}
+```
+> 2. https://www.codewars.com/kata/526571aae218b8ee490006f4  
+> Solution:  
+```javascript
+var countBits = function(n) {
+  let count = 0
+  let strNumber = n.toString(2)
+  
+  for(let i = 0; i < strNumber.length; i++) {
+    if(strNumber[i] === '1')
+      count++
+  }
+  
+  return count
+};
+```
+>  3. https://www.codewars.com/kata/54b724efac3d5402db00065e  
+> Solution:
+```javascript
+decodeMorse = function(morseCode){
+  morseCode = morseCode.trim().split(" ");
+  let newWord = ""
+  
+  for(let i = 0; i < morseCode.length; i++) {
+    if(morseCode[i] === "" && morseCode[i + 1] === "") {
+      newWord += " "
+      continue;
+    }
+      
+    if(morseCode[i] === "") 
+      continue;
+    newWord += MORSE_CODE[morseCode[i]];
+  }
+  
+  return newWord;
+}
+```

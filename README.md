@@ -301,4 +301,45 @@ decodeMorse = function(morseCode){
   
   return newWord;
 }
+```  
+
+> ## **Tuesday** 
+> Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+> Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).  
+> If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.  
+> Solution  
+```javascript
+function order(words){
+  let regex = /\d/
+  let arr = words.split(" ");
+  let aux = [];
+  
+  for(let i = 0; i < arr.length; i++) {
+    let num = parseInt(arr[i].match(regex))
+    aux[num - 1] = arr[i];
+  }
+  
+  return aux.join(" ")
+}
+```
+
+> 2. Count the number of Duplicates.  
+> Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.  
+> Solution:  
+```javascript
+function duplicateCount(text){
+  let counter = 0;
+  text = text.toLowerCase().split("").sort();
+  
+  for(let i = 0; i < text.length; i++) {
+    if(text[i] === text[i + 1]) {
+      counter++;
+      while(text[i] === text[i + 1]) {
+        i++;
+      }
+    }
+  }
+  
+  return counter;
+}
 ```

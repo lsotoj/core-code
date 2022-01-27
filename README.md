@@ -343,3 +343,20 @@ function duplicateCount(text){
   return counter;
 }
 ```
+
+> 3. Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.  
+```javascript
+function pigIt(str){
+  
+    str = str.split(" ");
+   str = str.map(word => {
+        if(/[!¡?¿]/.test(word)){
+            return word;
+        }
+        word = word  + word[0] + "ay";
+        word = word.slice(1);
+        return word;
+    });
+    return str.join(" ");
+}
+```

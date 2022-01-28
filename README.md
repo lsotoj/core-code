@@ -360,3 +360,24 @@ function pigIt(str){
     return str.join(" ");
 }
 ```
+> ## **Wednesday** 
+> 1. Write a function that takes a string of parentheses, and determines if the order of the parentheses is valid. The function should return true if the string is valid, and false if it's invalid.  
+> Solution:  
+```javascript
+function validParentheses(parens) {
+  let arr = parens.split("");
+  let open= 0;
+  console.log(arr);
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] === "(")
+      open++;
+    
+    if(arr[i] === ")")
+      open--
+      
+    if(open < 0) 
+      return false
+  }
+  
+  return open === 0;
+```

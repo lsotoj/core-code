@@ -381,3 +381,31 @@ function validParentheses(parens) {
   
   return open === 0;
 ```
+> 2. Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case).  
+```javascript
+function toCamelCase(str){
+  let arr = str.split(/[\-_]/);
+  let result = [arr[0]]
+  for(let i = 1; i < arr.length; i++) {
+    result.push(arr[i][0].toUpperCase() + arr[i].slice(1))
+  }
+  return result.join("")
+}
+```
+> 3. Implement the function unique_in_order which takes as argument a sequence and returns a list of items without any elements with the same value next to each other and preserving the original order of elements.  
+> Solution:
+```javascript
+var uniqueInOrder=function(iterable){
+  if(!iterable)
+    return []
+  
+  iterable = [...iterable]
+
+  let result = [iterable[0]];
+  for(let i = 1; i < iterable.length; i++) {
+    if (result[result.length - 1] != iterable[i])
+        result.push(iterable[i])
+  }
+  return result
+}
+```

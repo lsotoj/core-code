@@ -409,3 +409,47 @@ var uniqueInOrder=function(iterable){
   return result
 }
 ```
+> ## **Thursday**
+> 1. In this kata you have to write a method that folds a given array of integers by the middle x-times.  
+>  Solution:
+```javascript
+function foldArray(array, runs) {
+  let aux = [...array];
+  
+  while(runs !== 0) {
+    let split = Math.trunc(aux.length / 2);
+    let newArr = aux.splice(aux.length - split, split);
+    for(let i = 0; i < newArr.length; i++) {
+      aux[i] = aux[i] + newArr[newArr.length - 1 - i]
+    }
+    runs--
+  }  
+  return aux;
+}
+```  
+> 
+> 2. You want to create secret messages which can be deciphered by the Decipher this! kata. Here are the conditions:  
+> Your message is a string containing space separated words.  
+> The first letter must be converted to its ASCII code.  
+> The second letter must be switched with the last letter.  
+```javascript
+function encryptThis(message) {
+  let arr = message.split(" ");
+  
+  arr.forEach((element, index, fullArr) => {
+    let aux = element.split("");
+    aux[0] = aux[0].charCodeAt(0);
+    let ultima = aux[1];
+    aux[1] = aux[aux.length - 1];
+    aux[aux.length - 1] = ultima;
+    fullArr[index] = aux.join("");
+  })
+  
+  return arr.join(" ")
+}
+```  
+
+
+
+
+

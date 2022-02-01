@@ -448,6 +448,20 @@ function encryptThis(message) {
   return arr.join(" ")
 }
 ```  
+> 3. Given: an array containing hashes of names.  
+>
+> Return: a string formatted as a list of names separated by commas except for the last two names, which should be separated by an ampersand.  
+> Solution:
+```javascript
+function list(names){
+  //your code here
+  let result = "";
+  return names.reduce((acc, current, idx) =>{ return idx === names.length - 1? acc + " & " + current.name: acc + ", " + current.name
+  },"").slice(2).trim()
+}
+```  
+
+
 
 
 

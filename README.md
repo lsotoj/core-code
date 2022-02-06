@@ -489,10 +489,141 @@ users.forEach(logPerson);
 
 
 ``` 
+> 4. Typescript union types.  
+> Solution:
+
+```typescript
+
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
+
+interface Admin {
+    name: string;
+    age: number;
+    role: string;
+}
 
 
+export type Person = User | Admin;
+
+export const persons: Person[] /* <- Person[] */ = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Jane Doe',
+        age: 32,
+        role: 'Administrator'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    },
+    {
+        name: 'Bruce Willis',
+        age: 64,
+        role: 'World saver'
+    }
+];
+
+export function logPerson(user: Person) {
+    console.log(` - ${user.name}, ${user.age}`);
+}
+
+persons.forEach(logPerson);
 
 
+```
+> 5. Typescript in operator.   
+> Solution:
 
+```typescript
+interface User {
+    name: string;
+    age: number;
+    occupation: string;
+}
 
+interface Admin {
+    name: string;
+    age: number;
+    role: string;
+}
 
+export type Person = User | Admin;
+
+export const persons: Person[] = [
+    {
+        name: 'Max Mustermann',
+        age: 25,
+        occupation: 'Chimney sweep'
+    },
+    {
+        name: 'Jane Doe',
+        age: 32,
+        role: 'Administrator'
+    },
+    {
+        name: 'Kate Müller',
+        age: 23,
+        occupation: 'Astronaut'
+    },
+    {
+        name: 'Bruce Willis',
+        age: 64,
+        role: 'World saver'
+    }
+];
+
+export function logPerson(person: Person) {
+    let additionalInformation: string;
+    if ('role' in person) {
+        additionalInformation = person.role;
+    } else {
+        additionalInformation = person.occupation;
+    }
+    console.log(` - ${person.name}, ${person.age}, ${additionalInformation}`);
+}
+
+persons.forEach(logPerson);
+
+``` 
+> 6. Given an array of integers, find the one that appears an odd number of times.  
+> Solution:  
+
+```javascript
+function findOdd(A) {
+    //happy coding!
+    let numbers = {}
+    A.forEach(element => {
+        if(element in numbers){
+            numbers[element]++;
+        } else {    
+            numbers[element] = 1;
+        }
+    });
+
+    function isOdd(num){
+        return parseInt(num) % 2 == 0? false: true;
+    }
+    for(let i in numbers){
+       if(isOdd(numbers[i])) return parseInt(i)
+    }
+}
+```
+> 7. Write a function that takes in a string of one or more words, and returns the same string, but with all five or more letter words reversed (Just like the name of this Kata). Strings passed in will consist of only letters and spaces. Spaces will be included only when more than one word is present.  
+> Solution:  
+```javascript
+function spinWords(string){
+    return string.split(" ").map(word => {
+        if(word.length >= 5) return word.split("").reverse().join("");
+        return word
+    }).join(" ");
+}
+```

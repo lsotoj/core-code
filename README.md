@@ -627,3 +627,31 @@ function spinWords(string){
     }).join(" ");
 }
 ```
+> ## **Wednesday**
+> 1. Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.  
+> Solution:  
+```javascript
+function arrayDiff(a, b) {
+    if(a.length == 0) return [];
+    if(b.length == 0) return a;
+    for(let i = 0; i < b.length; i++) {
+        for(let j = 0; j < a.length; j++) {
+            if(b[i] === a[j]) {
+                a.splice(j, 1);
+                j--;
+            }
+        }
+    }
+    return a;
+}
+```
+> 2. Write a function that accepts an array of 10 integers (between 0 and 9), that returns a string of those numbers in the form of a phone number.  
+> Solution:  
+```javascript
+function createPhoneNumber(numbers){
+    numbers.splice(0, 0, "(");
+    numbers.splice(4, 0, ") ");
+    numbers.splice(8, 0, "-");
+    return numbers.join("");
+} 
+```

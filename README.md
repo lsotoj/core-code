@@ -655,3 +655,77 @@ function createPhoneNumber(numbers){
     return numbers.join("");
 } 
 ```
+> ## **Thursday**
+> 1. A pangram is a sentence that contains every single letter of the alphabet at least once. For example, the sentence "The quick brown fox jumps over the lazy dog" is a pangram, because it uses the letters A-Z at least once (case is irrelevant).  
+> Solution:  
+```javascript
+function isPangram(string){
+    //...
+    string = string.toLowerCase();
+    
+    for(let i = 97; i <= 122; i++) {
+        if(string.indexOf(String.fromCharCode(i)) < 0) return false;
+    }
+    return true;
+}
+```
+
+> 2. Write a method that takes an array of consecutive (increasing) letters as input and that returns the missing letter in the array.  
+> Solution:  
+```javascript
+function findMissingLetter(array) {
+    let pos = array[0].charCodeAt(0)
+    for(let i = 0; i < array.length - 1; i++) {
+        if(pos + 1 !== array[i + 1].charCodeAt(0)) return String.fromCharCode(pos + 1);
+        pos++
+    }
+}
+```
+> 3. There is an array with some numbers. All numbers are equal except for one. Try to find it!  
+> Solution:  
+```javascript
+function findUniq(arr) {
+    // do magic
+    let elements = {};
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] in elements) {
+            elements[arr[i]]++
+        } else {
+            elements[arr[i]] = 1;
+        }
+    }
+    let index = Object.values(elements).indexOf(1);
+    return parseFloat(Object.keys(elements)[index]);
+}
+```
+
+> 4. If a chunk represents an integer such as the sum of the cubes of its digits is divisible by 2, reverse that chunk; otherwise rotate it to the left by one position. Put together these modified chunks and return the result as a string.  
+> Solution: 
+```javascript
+function revrot(str, sz) {
+    // your code
+    if(sz <= 0 || str.length == 0) return "";
+    if(sz > str.length) return "";
+    let arr = str.split("")
+    let chunks = []
+    while(arr.length >= sz){
+        chunks.push(arr.splice(0,sz))
+    }
+
+
+    return chunks.reduce((acc, curr) => {
+        let flag = curr.reduce((sum, curr) => {
+            return sum + Math.pow(curr, 3)
+        }, 0)
+
+
+        if(flag % 2 == 0){
+            return acc + curr.reverse().join("");
+        } else {
+            curr.push(curr[0])
+            return acc + curr.splice(1).join(""); 
+        }
+    }, "");
+}
+```
+

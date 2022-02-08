@@ -728,4 +728,11 @@ function revrot(str, sz) {
     }, "");
 }
 ```
-
+> 5. The King of a small country invites 1000 senators to his annual party. As a tradition, each senator brings the King a bottle of wine. Soon after, the Queen discovers that one of the senators is trying to assassinate the King by giving him a bottle of poisoned wine. Unfortunately, they do not know which senator, nor which bottle of wine is poisoned, and the poison is completely indiscernible.  
+> Solution:  
+ ```javascript
+ function find(rats) {
+    // return number of poisoned bottle
+  return rats.reduce((a,b) => a+Math.pow(2,b),0)
+}
+ ```

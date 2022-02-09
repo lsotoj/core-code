@@ -736,3 +736,5 @@ function revrot(str, sz) {
   return rats.reduce((a,b) => a+Math.pow(2,b),0)
 }
  ```
+ 
+ [**Week 5**](https://github.com/lsotoj/core-code/blob/main/Week%205.md)

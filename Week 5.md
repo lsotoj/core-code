@@ -26,3 +26,29 @@ export class G964 {
     }
 }
 ```
+<br/><br/><br/>
+4. This time no story, no theory. The examples below show you how to write function accum:  
++ Solution:  
+```typescript
+export function accum(s: string): string {
+    let arr: string[] = s.split("");
+    return arr.reduce((acc: string, current: string, index: number) => {
+        
+        return acc + "-" + current.toUpperCase() + current.toLowerCase().repeat(index);
+    }, "").slice(1);
+
+}
+```
+<br/><br/><br/>
+5. Wolves have been reintroduced to Great Britain. You are a sheep farmer, and are now plagued by wolves which pretend to be sheep. Fortunately, you are good at spotting them.  
++ Solution:  
+```typescript
+export function warnTheSheep(queue: string[]): string {
+    if(queue[queue.length - 1] === "wolf") {
+        return "Pls go away and stop eating my sheep"
+    } else {
+        let pos:number = queue.length - queue.indexOf("wolf") - 1;
+        return `Oi! Sheep number ${pos}! You are about to be eaten by a wolf!`
+    }
+}
+```

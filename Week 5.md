@@ -54,4 +54,51 @@ export function warnTheSheep(queue: string[]): string {
 ```
 <br/><br/><br/><br/>
 
-# **Tuesday**    
+# **Tuesday**   
+<br/><br/>  
+1. "A divisibility rule is a shorthand way of determining whether a given integer is divisible by a fixed divisor without performing the division, usually by examining its digits."  
++ Solution:  
+ ```typescript
+ export function thirt(n: number): number {
+    // your code
+    let last: number = n;
+    let num: string[] = n.toString().split("");
+    let sequence: number[] = [];
+    let flag: number = 0;
+    for(let i = 0; i < num.length; i++) {
+        sequence.push(Math.pow(10, i) % 13);
+    }
+
+
+    while(last !== flag) {
+        flag = last;
+        last = num.reverse().reduce((sum, current, index) => {
+            return (parseInt(current) * sequence[index]) + sum;
+        }, 0);
+        num = last.toString().split("");
+
+    }
+    return last;
+}
+ ```
+ <br/>
+ 2. Given a positive integer n written as abcd... (a, b, c, d... being digits) and a positive integer p.  
+
++ we want to find a positive integer k, if it exists, such as the sum of the digits of n taken to the successive powers of p is equal to k * n.  
++ Solution:  
+```typescript
+export class G964 {
+
+    public static digPow = (n: number, p: number) => {
+        let arr: string[] = n.toString().split("")
+        let top: number;
+
+        top = arr.reduce((sum: number, current: string, index: number) => {
+            return sum + Math.pow(parseInt(current), p++)
+        }, 0);
+        if(top === n) return 1
+        if(!Number.isInteger(top / n)) return -1
+        return top / n;
+    }
+}
+```

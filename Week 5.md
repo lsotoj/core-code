@@ -102,3 +102,28 @@ export class G964 {
     }
 }
 ```
+ <br/> <br/>
+3. Write a function that takes a string of braces, and determines if the order of the braces is valid. It should return true if the string is valid, and false if it's invalid.  
++ Solution:  
+```typescript
+export function validBraces(braces: string): boolean {
+   const arr: string[] = braces.split("");
+    let count: number = 0;
+    let flag: boolean = false;
+
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] === ")") {
+            count--;
+            if(arr[i - 1] === "(") flag = true;
+        } else if(arr[i] === "]") {
+            count--;
+            if(arr[i - 1] === "[") flag = true;
+        } else if(arr[i] === "}") {
+            count--;
+            if(arr[i -1] === "{") flag = true;
+        } else { count++; }
+        if(count < 0) return false;
+    }
+    return flag;
+}
+```

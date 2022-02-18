@@ -127,3 +127,20 @@ export function validBraces(braces: string): boolean {
     return flag;
 }
 ```
+
+# **Wednesday**   
+<br/><br/>  
+1. The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.  
+* Solution:  
+```typescript
+export function duplicateEncode(word: string){
+    // ...
+    let arr = word.toLocaleLowerCase().split("")
+    let dic: any = {};
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] in dic) dic[arr[i]]++;
+        else dic[arr[i]] = 1;
+    }
+    return arr.map((word) => dic[word] > 1? ")": "(").join("");
+}
+```

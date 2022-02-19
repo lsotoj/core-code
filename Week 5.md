@@ -144,3 +144,42 @@ export function duplicateEncode(word: string){
     return arr.map((word) => dic[word] > 1? ")": "(").join("");
 }
 ```
+ <br/><br/>  
+2. Given an array of integers, find the one that appears an odd number of times. There will always be only one integer that appears an odd number of times.  
+* Solution:
+```typescript
+export const findOdd = (xs: number[]): number => {
+    // happy coding!
+    let dict: any = {};
+    for(let i = 0; i < xs.length; i++) {
+        if(xs[i] in dict) dict[xs[i]]++;
+        else dict[xs[i]] = 1;
+    }
+
+    for(let word in dict) {
+        if(dict[word] % 2 !== 0) return parseInt(word);
+    }
+    return 0;
+};
+```
+<br/><br/>  
+3. Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.  
++ Solution:  
+```typescript
+export class G964 {
+    public static inArray(a1: string[], a2: string[]): string[] {
+      // your code
+        let arr: string[]= [];
+        let dict: any = {};
+
+        a1.forEach((elemento1) => {
+            a2.forEach((elemento2) => {
+                if(elemento2.includes(elemento1) && !(elemento1 in dict)) dict[elemento1] = 1;
+            })
+        })
+
+        return Object.keys(dict).sort();
+    }
+}
+```
+

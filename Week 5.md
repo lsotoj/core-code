@@ -182,4 +182,38 @@ export class G964 {
     }
 }
 ```
+<br/><br/>  
+4. Let us consider this example (array written in general format): ```ls = [0, 1, 3, 6, 10]```  
+The corresponding sums are (put together in a list): [20, 20, 19, 16, 10, 0]  
++ Solution:
+```typescript
+export function partsSums(ls: number[]): number[] {
+    console.log(ls)
+    let sum: number = ls.reduce((sum, current) => sum + current, 0);
+    let arr: number[] = [];
+    arr.push(sum);
+    for(let i = 1; i <= ls.length; i++) {
+        sum -= ls[i - 1];
+        arr.push(sum)
+    }
+    return arr;
+}
+```
 
+<br/><br/>  
+5. You are given an array(list) strarr of strings and an integer k. Your task is to return the first longest string consisting of k consecutive strings taken in the array.  
++ Solution:  
+```typescript
+export function longestConsec(strarr: string[], k: number): string {
+
+    if(k === 1) strarr.sort((a, b) => b.length - a.length)[0];
+    if(strarr.length === 0 || k < 0 || k > strarr.length) return "";
+    
+      let newArr: string[] = strarr.map((current, index, arr) => {
+        return arr.slice(index, index + k).join("");
+      });
+
+    let greatest: number = newArr.map(el => el.length).sort((a, b) => b-a)[0]
+    return newArr.find( el => el.length === greatest);
+}
+```

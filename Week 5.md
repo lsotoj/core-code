@@ -217,3 +217,8 @@ export function longestConsec(strarr: string[], k: number): string {
     return newArr.find( el => el.length === greatest);
 }
 ```
+<br/><br/><br/>
+# **Thursday**  
+1. Tile Using Typescript.  
++ Solution:  
+[GitHub Solution ](https://github.com/lsotoj/CoreCodeChallenges/blob/main/week5/tile/Tile.ts)

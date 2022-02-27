@@ -220,5 +220,11 @@ export function longestConsec(strarr: string[], k: number): string {
 <br/><br/><br/>
 # **Thursday**  
 1. Tile Using Typescript.  
-+ Solution:  
-[GitHub Solution ](https://github.com/lsotoj/CoreCodeChallenges/blob/main/week5/tile/Tile.ts)
++ Solution: 
+[Code](https://github.com/lsotoj/CoreCodeChallenges/blob/main/week5/tile/Tile.ts)
+<br/><br/>
+2. Time Using Typescript.  
++ Solution: 
+[Code](https://github.com/lsotoj/CoreCodeChallenges/blob/main/week5/time/Time.ts)
+
+

@@ -227,4 +227,7 @@ export function longestConsec(strarr: string[], k: number): string {
 + Solution: 
 [Code](https://github.com/lsotoj/CoreCodeChallenges/blob/main/week5/time/Time.ts)
 
+<br/><br/>
+3. Rational Using Typescript.  
++ Solution: [Code](https://github.com/lsotoj/CoreCodeChallenges/blob/main/week5/rational/Rational.ts)
 

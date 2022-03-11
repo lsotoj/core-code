@@ -5,4 +5,4 @@
 <br/><br/><br/>
 # **Tuesday**   
 1. Movies Using Typescript.  
-+ Solution [Code]()
++ Solution [Code](https://github.com/lsotoj/CoreCodeChallenges/tree/master/week6/Tuesday/Movies/src)

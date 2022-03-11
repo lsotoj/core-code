@@ -7,5 +7,5 @@
 1. Movies Using Typescript:
 * Solution [Code](https://github.com/lsotoj/CoreCodeChallenges/tree/master/week6/Tuesday/Movies/src)
 <br/>
-2. Readme  
-+ []()
+2. Readme.  
+* Solution [Code](https://github.com/lsotoj/CoreCodeChallenges/tree/master/week6/Tuesday/Movies/src)

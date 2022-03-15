@@ -8,4 +8,4 @@
 * Solution [Code](https://github.com/lsotoj/CoreCodeChallenges/tree/master/week6/Tuesday/Movies/src)
 <br/>
 2. Readme.  
-* Solution [Code](https://github.com/lsotoj/CoreCodeChallenges/tree/master/week6/Tuesday/Movies/src)
++ Solution [Code](https://github.com/lsotoj/CoreCodeChallenges/tree/master/week6/Tuesday/Movies/src)

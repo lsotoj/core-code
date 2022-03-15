@@ -740,3 +740,5 @@ function revrot(str, sz) {
  [**Week 5**](https://github.com/lsotoj/core-code/blob/main/Week%205.md)
 <br/><br/>
 [**Week 6**](https://github.com/lsotoj/core-code/blob/main/Week%206.md)
+<br/><br/>
+[**Week 9**](https://github.com/lsotoj/core-code/blob/main/Week%209.md)
